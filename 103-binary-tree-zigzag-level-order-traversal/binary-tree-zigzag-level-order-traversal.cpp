@@ -27,18 +27,14 @@ public:
                 int index = leftToRight?i:(size-1-i);
                 level[index] = node->val;
                  if(node->left)
-                    q.push(node->left);
-                    
+                    q.push(node->left);  
                 if(node->right)
                     q.push(node->right);
             }
-            
             leftToRight = !leftToRight;
             result.push_back(level);
         }
-        
         return result;
-            }
-        };
+            }};
 
     
