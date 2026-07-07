@@ -8,11 +8,10 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-
 class Solution {
 public:
     ListNode* oddEvenList(ListNode* head) {
-        if (!head || !head->next)
+        if (head == nullptr || head->next == nullptr)
             return head;
 
         ListNode* odd = head;
@@ -28,6 +27,7 @@ public:
         }
 
         odd->next = evenHead;
+
         return head;
     }
 };
